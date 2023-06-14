@@ -1,1 +1,1 @@
-This project contains scripts that creates an alias, prints current user in linux, add a path to directory, counts the number of directory in the path, list global or environment variables, list local and global variables, creates new local, new global variable, prints the result of the addition of 128, divide and rule, displays the result of breath to the power of love, converts base 2 to base 10, creates all possible combination of 2 letters, prints a number with 2 decimal places followed by a new line.
+Variable expansion project
