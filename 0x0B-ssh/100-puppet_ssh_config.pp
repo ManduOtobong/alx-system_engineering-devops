@@ -1,17 +1,7 @@
-#!/usr/bin/env bash
-# Puppet script to create ssh config file
+# SSH configuration file to connect to server without password
 
-file { '/etc/ssh/ssh_config':
-   ensure => 'present',
+exec { "echo":
+  path => "usr/bin:/bin",
+  command => 'echo "    IdentityFile ~/.ssh/school\n    PasswordAuthentication no" >> /etc/ssh/ssh_config',
+  returns => [0,1],
 }
-
-file_line { 'Turn off passwd auth':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'PasswordAuthentication",
-}
-
-file_line { 'Declare identity file':
-  ensure => 'present',
-  path   => '/etc/ssh/ssh_config',
-  line   => 'IdentityFile ~/.ssh/school',
